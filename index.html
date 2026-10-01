@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business Template</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .placeholder-img {
+            background-color: #e5e7eb;
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        /* Contact & Info Section */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            min-width: 80px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #9ca3af;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .about-layout, .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container nav-container">
+            <!-- REPLAY BUSINESS NAME HERE -->
+            <a href="#" class="logo">[BUSINESS NAME]</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <!-- REPLAY HERO HEADER & SUBTITLE -->
+            <h1>Your Trusted Local Partner</h1>
+            <p>Providing high-quality services and exceptional customer care right here in our community. Let us help you today.</p>
+            <a href="#contact" class="btn">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <!-- SERVICE CARD 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Service One</h3>
+                    <p>Enter a brief summary of what this primary service offers and why it benefits the customer.</p>
+                </div>
+                <!-- SERVICE CARD 2 -->
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3>Service Two</h3>
+                    <p>Enter a brief summary of what this primary service offers and why it benefits the customer.</p>
+                </div>
+                <!-- SERVICE CARD 3 -->
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Service Three</h3>
+                    <p>Enter a brief summary of what this primary service offers and why it benefits the customer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" style="background-color: var(--bg-light);">
+        <div class="container about-layout">
+            <div>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">About Us</h2>
+                <p style="margin-bottom: 15px;"><strong>Who We Are:</strong> Write a 2-3 sentence overview introducing the local business, its background, and its core mission statement.</p>
+                <p><strong>Why Choose Us:</strong> Highlight a few quick differentiators (e.g., family-owned, 10+ years experience, licensed and insured) that build instant trust with local clients.</p>
+            </div>
+            <div>
+                <!-- PLACEHOLDER IMAGE -->
+                <div class="placeholder-img">
+                    [Placeholder: 600x350 Image - Main Visual/Team/Storefront]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & IMPORTANT INFO -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Location</h2>
+            <div class="contact-layout">
+                <div>
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 20px; color: var(--text-light);">Have a question or want to schedule an appointment? Reach out to us using any of the channels below.</p>
+                    
+                    <!-- REPLAY IMPORTANT BUSINESS INFO -->
+                    <ul class="info-list">
+                        <li>
+                            <span class="info-label">📞 Phone:</span>
+                            <span>[Insert Phone Number Here]</span>
+                        </li>
+                        <li>
+                            <span class="info-label">📧 Email:</span>
+                            <span>[Insert Email Address Here]</span>
+                        </li>
+                        <li>
+                            <span class="info-label">📍 Address:</span>
+                            <span>[Insert Street Address, City, State, Zip]</span>
+                        </li>
+                        <li>
+                            <span class="info-label">⏰ Hours:</span>
+                            <span>Mon - Fri: 9:00 AM - 5:00 PM<br>Sat - Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <!-- PLACEHOLDER MAP / PHOTO -->
+                    <div class="placeholder-img" style="height: 100%;">
+                        [Placeholder: Google Maps or Location Image]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 [BUSINESS NAME]. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
